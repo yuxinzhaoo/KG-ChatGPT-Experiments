@@ -1,0 +1,1621 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://test.org/bft.owl#"
+     xml:base="http://test.org/bft.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:kitchenKG="http://knowrob.org/kb/kitchenKG.owl#">
+    <owl:Ontology rdf:about="http://knowrob.org/kb/kitchenKG.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#can_cut -->
+
+    <owl:ObjectProperty rdf:about="http://knowrob.org/kb/kitchenKG.owl#can_cut">
+        <rdfs:domain rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Cutlery"/>
+        <rdfs:range rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Food"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#can_spread -->
+
+    <owl:ObjectProperty rdf:about="http://knowrob.org/kb/kitchenKG.owl#can_spread">
+        <rdfs:domain rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Cutlery"/>
+        <rdfs:range rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Spread"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#served_with -->
+
+    <owl:ObjectProperty rdf:about="http://knowrob.org/kb/kitchenKG.owl#served_with">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#spread_on -->
+
+    <owl:ObjectProperty rdf:about="http://knowrob.org/kb/kitchenKG.owl#spread_on">
+        <rdfs:domain rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Spread"/>
+        <rdfs:range rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Food"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#storage_location -->
+
+    <owl:ObjectProperty rdf:about="http://knowrob.org/kb/kitchenKG.owl#storage_location">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Storage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#used_with -->
+
+    <owl:ObjectProperty rdf:about="http://knowrob.org/kb/kitchenKG.owl#used_with">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#is_drinkable -->
+
+    <owl:DatatypeProperty rdf:about="http://knowrob.org/kb/kitchenKG.owl#is_drinkable">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#is_edible -->
+
+    <owl:DatatypeProperty rdf:about="http://knowrob.org/kb/kitchenKG.owl#is_edible">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Appliance -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Appliance">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Kitchenware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Beer -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Beer">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Drink"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Bread -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Bread">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Chair -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Chair">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Furniture"/>
+        <owl:disjointWith rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Table"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Cocktail -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Cocktail">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Drink"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Coffee -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Coffee">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Drink"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Condiment -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Condiment">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Cutlery -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Cutlery">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Tableware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Dairy -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Dairy">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Drink -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Drink">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knowrob.org/kb/kitchenKG.owl#is_drinkable"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knowrob.org/kb/kitchenKG.owl#is_edible"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Egg -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Egg">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Food"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#fried_egg"/>
+                    <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#hardboiled_egg"/>
+                    <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#scrambled_egg"/>
+                </owl:oneOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#EnergyDrink -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#EnergyDrink">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Drink"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Food -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Food">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knowrob.org/kb/kitchenKG.owl#is_drinkable"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knowrob.org/kb/kitchenKG.owl#is_edible"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Fork -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Fork">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Cutlery"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Fruit -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Fruit">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Furniture -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Furniture">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knowrob.org/kb/kitchenKG.owl#is_drinkable"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knowrob.org/kb/kitchenKG.owl#is_edible"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Glassware -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Glassware">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Tableware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Grain -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Grain">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#HotChocolate -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#HotChocolate">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Drink"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Juice -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Juice">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Drink"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#KitchenIsland -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#KitchenIsland">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Kitchenware -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Kitchenware">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knowrob.org/kb/kitchenKG.owl#is_drinkable"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knowrob.org/kb/kitchenKG.owl#is_edible"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Knife -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Knife">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Cutlery"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Legume -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Legume">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Meat -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Meat">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Milk -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Milk">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Drink"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Plate -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Plate">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Tableware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#PreparedFood -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#PreparedFood">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Salad -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Salad">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Seafood -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Seafood">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Smoothie -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Smoothie">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Drink"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Snack -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Snack">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Soda -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Soda">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Drink"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Soup -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Soup">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Spoon -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Spoon">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Cutlery"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Spread -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Spread">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Condiment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Storage -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Storage">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knowrob.org/kb/kitchenKG.owl#is_edible"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Sweet -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Sweet">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Table -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Table">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Tableware -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Tableware">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Kitchenware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Tea -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Tea">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Drink"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Vegetable -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Vegetable">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Water -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Water">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Drink"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Wine -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/kitchenKG.owl#Wine">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Drink"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#AirFryer -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#AirFryer">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Appliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Ale -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Ale">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Beer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Barleywine -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Barleywine">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Beer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Blender -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Blender">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Appliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Bock -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Bock">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Beer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Cabinet -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Cabinet">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Storage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Cappuccino -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Cappuccino"/>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Cold_Brew -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Cold_Brew">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Coffee"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Cosmopolitan -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Cosmopolitan">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Cocktail"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#CulteryDrawer -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#CulteryDrawer">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Storage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Daiquiri -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Daiquiri">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Cocktail"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#DishRack -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#DishRack">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Storage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Dishwasher -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Dishwasher">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Appliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Espresso -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Espresso">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Coffee"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Flat_White -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Flat_White">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Coffee"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#IPA -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#IPA">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Beer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Iced_Coffee -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Iced_Coffee">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Coffee"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Jucier -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Jucier">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Appliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Lager -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Lager">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Beer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Latte -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Latte">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Coffee"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Manhattan -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Manhattan">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Cocktail"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Margarita -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Margarita">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Cocktail"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Martini -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Martini">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Cocktail"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Microwave -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Microwave">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Appliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Mocha -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Mocha">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Coffee"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Mojito -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Mojito">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Cocktail"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Monster_Energy -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Monster_Energy">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#EnergyDrink"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Negroni -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Negroni">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Cocktail"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Old_Fashioned -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Old_Fashioned">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Cocktail"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Oven -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Oven">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Appliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Pantry -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Pantry">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Storage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Pilsner -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Pilsner">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Beer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Pina_Colada -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Pina_Colada">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Cocktail"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Porter -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Porter">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Beer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Red_Bull -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Red_Bull">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#EnergyDrink"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#RiceCooker -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#RiceCooker">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Appliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Rockstar -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Rockstar">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#EnergyDrink"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Saison -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Saison">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Beer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Sideboard -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Sideboard">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Storage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#SpiceRack -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#SpiceRack">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Storage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Stout -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Stout">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Beer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Stove -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Stove">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Appliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Toaster -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Toaster">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Appliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#WheatBeer -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#WheatBeer">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Beer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#Whiskey_Sour -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#Whiskey_Sour">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Cocktail"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#WineRack -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#WineRack">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Storage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#apple -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#apple">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Fruit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#apple_juice -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#apple_juice">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Juice"/>
+        <kitchenKG:storage_location rdf:resource="http://knowrob.org/kb/kitchenKG.owl#refrigerator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#beef -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#beef">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Meat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#beets -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#beets">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#black_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#black_coffee">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Coffee"/>
+        <kitchenKG:served_with rdf:resource="http://knowrob.org/kb/kitchenKG.owl#milk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#black_tea -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#black_tea"/>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#bread_basket -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#bread_basket">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Tableware"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#bread_plate -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#bread_plate">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Plate"/>
+        <kitchenKG:storage_location rdf:resource="http://knowrob.org/kb/kitchenKG.owl#cupboard"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#broccoli -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#broccoli">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#burger -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#burger">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#PreparedFood"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#butter -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#butter">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Dairy"/>
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Spread"/>
+        <kitchenKG:spread_on rdf:resource="http://knowrob.org/kb/kitchenKG.owl#croissant"/>
+        <kitchenKG:storage_location rdf:resource="http://knowrob.org/kb/kitchenKG.owl#refrigerator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#butter_dish -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#butter_dish">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Plate"/>
+        <kitchenKG:storage_location rdf:resource="http://knowrob.org/kb/kitchenKG.owl#cupboard"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#butter_knife -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#butter_knife">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Knife"/>
+        <kitchenKG:can_spread rdf:resource="http://knowrob.org/kb/kitchenKG.owl#butter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#cake -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#cake">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Sweet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#candy -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#candy">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Sweet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#carrots -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#carrots">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#cheese -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#cheese">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Dairy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#chicken -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#chicken">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Meat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#chickpeas -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#chickpeas">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Legume"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#chips -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#chips">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Snack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#chocolate -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#chocolate">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Sweet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#cookie -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#cookie">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Sweet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#corn -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#corn">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Grain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#croissant -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#croissant">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Bread"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#cupboard -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#cupboard">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Storage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#dining_chair -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#dining_chair">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Chair"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#egg_cup -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#egg_cup">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Tableware"/>
+        <kitchenKG:used_with rdf:resource="http://knowrob.org/kb/kitchenKG.owl#hardboiled_egg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#fish -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#fish">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Seafood"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#fork -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#fork">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Fork"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#fried_egg -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#fried_egg">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Egg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#garnish -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#garnish">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Food"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#glass -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#glass">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Glassware"/>
+        <kitchenKG:storage_location rdf:resource="http://knowrob.org/kb/kitchenKG.owl#cupboard"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#green_smoothie -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#green_smoothie">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Smoothie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#green_tea -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#green_tea">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Tea"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#hardboiled_egg -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#hardboiled_egg">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Egg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#hot_chocolate -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#hot_chocolate">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#HotChocolate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#ice_cream -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#ice_cream">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Dairy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#kitchen_island -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#kitchen_island">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#KitchenIsland"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#knife -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#knife">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Knife"/>
+        <kitchenKG:can_spread rdf:resource="http://knowrob.org/kb/kitchenKG.owl#butter"/>
+        <kitchenKG:used_with rdf:resource="http://knowrob.org/kb/kitchenKG.owl#fork"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#lamp -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#lamp">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Meat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#lemon -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#lemon">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Fruit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#lentils -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#lentils">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Legume"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#mango_smoothie -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#mango_smoothie">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Smoothie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#marmalade -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#marmalade">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Spread"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#milk -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#milk">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Dairy"/>
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Milk"/>
+        <kitchenKG:storage_location rdf:resource="http://knowrob.org/kb/kitchenKG.owl#refrigerator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#milk_pitcher -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#milk_pitcher">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Kitchenware"/>
+        <kitchenKG:used_with rdf:resource="http://knowrob.org/kb/kitchenKG.owl#milk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#nuts -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#nuts">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Snack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#oats -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#oats">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Grain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#orange_juice -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#orange_juice">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Juice"/>
+        <kitchenKG:storage_location rdf:resource="http://knowrob.org/kb/kitchenKG.owl#refrigerator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#pasta -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#pasta">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#PreparedFood"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#pepper_shaker -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#pepper_shaker">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Tableware"/>
+        <kitchenKG:used_with rdf:resource="http://knowrob.org/kb/kitchenKG.owl#salt_shaker"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#pizza -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#pizza">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#PreparedFood"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#popcorn -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#popcorn">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Snack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#pork -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#pork">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Meat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#potatoes -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#potatoes">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#red_wine -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#red_wine">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Wine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#refrigerator -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#refrigerator">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Appliance"/>
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Kitchenware"/>
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Storage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#rice -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#rice">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Grain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#salad -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#salad">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Salad"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#salt_shaker -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#salt_shaker">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Tableware"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#sandwich -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#sandwich">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#PreparedFood"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#sauce_dish -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#sauce_dish">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Plate"/>
+        <kitchenKG:storage_location rdf:resource="http://knowrob.org/kb/kitchenKG.owl#cupboard"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#scrambled_egg -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#scrambled_egg">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Egg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#shellfish -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#shellfish">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Seafood"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#soda -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#soda">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Drink"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#soup -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#soup">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Soup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#spinach -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#spinach">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#spoon -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#spoon">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Spoon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#sushi -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#sushi">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#PreparedFood"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#table -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#table">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Table"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#teacup -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#teacup">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Glassware"/>
+        <kitchenKG:storage_location rdf:resource="http://knowrob.org/kb/kitchenKG.owl#cupboard"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#teacup_plate -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#teacup_plate">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Plate"/>
+        <kitchenKG:storage_location rdf:resource="http://knowrob.org/kb/kitchenKG.owl#cupboard"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#toast -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#toast">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Bread"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#water -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#water">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Water"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#watermelon -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#watermelon">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Fruit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#wheat -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#wheat">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Grain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#white_wine -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#white_wine">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Wine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/kitchenKG.owl#yogurt -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/kitchenKG.owl#yogurt">
+        <rdf:type rdf:resource="http://knowrob.org/kb/kitchenKG.owl#Dairy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#Bread"/>
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#Condiment"/>
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#Egg"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#Coffee"/>
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#Juice"/>
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#Milk"/>
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#Tea"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#Drink"/>
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#Food"/>
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#Furniture"/>
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#Kitchenware"/>
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#Storage"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#Fork"/>
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#Glassware"/>
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#Knife"/>
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#Plate"/>
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#Spoon"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#bread_plate"/>
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#butter_dish"/>
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#sauce_dish"/>
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#teacup_plate"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#fried_egg"/>
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#hardboiled_egg"/>
+            <rdf:Description rdf:about="http://knowrob.org/kb/kitchenKG.owl#scrambled_egg"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

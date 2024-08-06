@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.org/kitchen_ontology#"
+     xml:base="http://www.example.org/kitchen_ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+    <owl:Ontology rdf:about="http://www.example.org/kitchen_ontology"/>
+
+    <!-- Classes -->
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#MealPreparationTask"/>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#Chopping">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#MealPreparationTask"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#Boiling">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#MealPreparationTask"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#Baking">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#MealPreparationTask"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#Frying">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#MealPreparationTask"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#Mixing">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#MealPreparationTask"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#Serving">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#MealPreparationTask"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#KitchenTool"/>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#Knife">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#KitchenTool"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#Pot">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#KitchenTool"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#Pan">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#KitchenTool"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#Oven">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#KitchenTool"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#Mixer">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#KitchenTool"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#Spoon">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#KitchenTool"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#Fork">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#KitchenTool"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#Plate">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#KitchenTool"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#Bowl">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#KitchenTool"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#KitchenObject"/>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#Ingredient">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#KitchenObject"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#CookedItem">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#KitchenObject"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#Vegetable">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#Ingredient"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#Fruit">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#Ingredient"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#Meat">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#Ingredient"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#Spice">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#Ingredient"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#Oil">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#Ingredient"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.example.org/kitchen_ontology#Dairy">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen_ontology#Ingredient"/>
+    </owl:Class>
+
+    <!-- Properties -->
+    <owl:ObjectProperty rdf:about="http://www.example.org/kitchen_ontology#hasTool">
+        <rdfs:domain rdf:resource="http://www.example.org/kitchen_ontology#MealPreparationTask"/>
+        <rdfs:range rdf:resource="http://www.example.org/kitchen_ontology#KitchenTool"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.example.org/kitchen_ontology#hasIngredient">
+        <rdfs:domain rdf:resource="http://www.example.org/kitchen_ontology#MealPreparationTask"/>
+        <rdfs:range rdf:resource="http://www.example.org/kitchen_ontology#Ingredient"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.example.org/kitchen_ontology#produces">
+        <rdfs:domain rdf:resource="http://www.example.org/kitchen_ontology#MealPreparationTask"/>
+        <rdfs:range rdf:resource="http://www.example.org/kitchen_ontology#CookedItem"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.example.org/kitchen_ontology#isPartOf">
+        <rdfs:domain rdf:resource="http://www.example.org/kitchen_ontology#KitchenObject"/>
+        <rdfs:range rdf:resource="http://www.example.org/kitchen_ontology#MealPreparationTask"/>
+    </owl:ObjectProperty>
+</rdf:RDF>

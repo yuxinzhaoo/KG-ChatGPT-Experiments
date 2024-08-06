@@ -1,0 +1,195 @@
+<rdf:RDF xmlns="http://www.example.org/kitchen#"
+     xml:base="http://www.example.org/kitchen"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.example.org/kitchen"/>
+
+    <owl:Class rdf:about="#Appliance"/>
+    <owl:Class rdf:about="#Blender">
+        <rdfs:subClassOf rdf:resource="#Appliance"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Microwave">
+        <rdfs:subClassOf rdf:resource="#Appliance"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Oven">
+        <rdfs:subClassOf rdf:resource="#Appliance"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Refrigerator">
+        <rdfs:subClassOf rdf:resource="#Appliance"/>
+        <rdfs:subClassOf rdf:resource="#Storage"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Toaster">
+        <rdfs:subClassOf rdf:resource="#Appliance"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Dishwasher">
+        <rdfs:subClassOf rdf:resource="#Appliance"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Mixer">
+        <rdfs:subClassOf rdf:resource="#Appliance"/>
+    </owl:Class>
+    <owl:Class rdf:about="#CoffeeMachine">
+        <rdfs:subClassOf rdf:resource="#Appliance"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#Storage"/>
+    <owl:Class rdf:about="#Cabinet">
+        <rdfs:subClassOf rdf:resource="#Storage"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Drawer">
+        <rdfs:subClassOf rdf:resource="#Storage"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Pantry">
+        <rdfs:subClassOf rdf:resource="#Storage"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Shelf">
+        <rdfs:subClassOf rdf:resource="#Storage"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Freezer">
+        <rdfs:subClassOf rdf:resource="#Storage"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#Furniture"/>
+    <owl:Class rdf:about="#Chair">
+        <rdfs:subClassOf rdf:resource="#Furniture"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Counter">
+        <rdfs:subClassOf rdf:resource="#Furniture"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Table">
+        <rdfs:subClassOf rdf:resource="#Furniture"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Stool">
+        <rdfs:subClassOf rdf:resource="#Furniture"/>
+    </owl:Class>
+    <owl:Class rdf:about="#KitchenIsland">
+        <rdfs:subClassOf rdf:resource="#Furniture"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#Utensil"/>
+    <owl:Class rdf:about="#Fork">
+        <rdfs:subClassOf rdf:resource="#Utensil"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Knife">
+        <rdfs:subClassOf rdf:resource="#Utensil"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Spoon">
+        <rdfs:subClassOf rdf:resource="#Utensil"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Whisk">
+        <rdfs:subClassOf rdf:resource="#Utensil"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Tongs">
+        <rdfs:subClassOf rdf:resource="#Utensil"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Peeler">
+        <rdfs:subClassOf rdf:resource="#Utensil"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Ladle">
+        <rdfs:subClassOf rdf:resource="#Utensil"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#Ingredient"/>
+    <owl:Class rdf:about="#Dairy">
+        <rdfs:subClassOf rdf:resource="#Ingredient"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Fruit">
+        <rdfs:subClassOf rdf:resource="#Ingredient"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Grain">
+        <rdfs:subClassOf rdf:resource="#Ingredient"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Meat">
+        <rdfs:subClassOf rdf:resource="#Ingredient"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Vegetable">
+        <rdfs:subClassOf rdf:resource="#Ingredient"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Spice">
+        <rdfs:subClassOf rdf:resource="#Ingredient"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Herb">
+        <rdfs:subClassOf rdf:resource="#Ingredient"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Oil">
+        <rdfs:subClassOf rdf:resource="#Ingredient"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Sauce">
+        <rdfs:subClassOf rdf:resource="#Ingredient"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#PreparedFood"/>
+    <owl:Class rdf:about="#Pasta">
+        <rdfs:subClassOf rdf:resource="#PreparedFood"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Salad">
+        <rdfs:subClassOf rdf:resource="#PreparedFood"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Sandwich">
+        <rdfs:subClassOf rdf:resource="#PreparedFood"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Soup">
+        <rdfs:subClassOf rdf:resource="#PreparedFood"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Pizza">
+        <rdfs:subClassOf rdf:resource="#PreparedFood"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Burger">
+        <rdfs:subClassOf rdf:resource="#PreparedFood"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Cake">
+        <rdfs:subClassOf rdf:resource="#PreparedFood"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Smoothie">
+        <rdfs:subClassOf rdf:resource="#PreparedFood"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#Drink"/>
+    <owl:Class rdf:about="#Coffee">
+        <rdfs:subClassOf rdf:resource="#Drink"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Juice">
+        <rdfs:subClassOf rdf:resource="#Drink"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Tea">
+        <rdfs:subClassOf rdf:resource="#Drink"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Water">
+        <rdfs:subClassOf rdf:resource="#Drink"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Soda">
+        <rdfs:subClassOf rdf:resource="#Drink"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Milk">
+        <rdfs:subClassOf rdf:resource="#Drink"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Beer">
+        <rdfs:subClassOf rdf:resource="#Drink"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Wine">
+        <rdfs:subClassOf rdf:resource="#Drink"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#Food">
+        <rdfs:subClassOf rdf:resource="#KitchenEntity"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Kitchenware">
+        <rdfs:subClassOf rdf:resource="#KitchenEntity"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Furniture">
+        <rdfs:subClassOf rdf:resource="#KitchenEntity"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Utensil">
+        <rdfs:subClassOf rdf:resource="#Kitchenware"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Appliance">
+        <rdfs:subClassOf rdf:resource="#Kitchenware"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Drink">
+        <rdfs:subClassOf rdf:resource="#Food"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Ingredient">
+        <rdfs:subClassOf rdf:resource="#Food"/>
+    </owl:Class>
+</rdf:RDF>
