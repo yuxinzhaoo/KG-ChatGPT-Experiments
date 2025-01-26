@@ -1,8 +1,1 @@
-# KG-ChatGPT-Experiments
-
-experiments conducted as described in our publication "" by ... . Pesented and Published at ... .
-
-- Experiment 1
-- Experiment 2
-- Experiment 3
-- Experiment 4
+Here is the dialogue process for generating a kitchen environment ontology using ChatGPT-4o's web interface. Each ontology has its own folder, and each folder contains three files: two are conversation records in different formats, and one is a manually edited OWL file based on the generated results.
