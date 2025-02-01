@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:kitchen="http://example.org/kitchen-appliances#">
+
+    <owl:Ontology rdf:about="http://example.org/kitchen-appliances"/>
+
+    <!-- Define the KitchenAppliance class -->
+    <owl:Class rdf:about="http://example.org/kitchen-appliances#KitchenAppliance"/>
+
+    <!-- Define specific appliance classes -->
+    <owl:Class rdf:about="http://example.org/kitchen-appliances#Stove" rdfs:subClassOf="kitchen:KitchenAppliance"/>
+    <owl:Class rdf:about="http://example.org/kitchen-appliances#Oven" rdfs:subClassOf="kitchen:KitchenAppliance"/>
+    <owl:Class rdf:about="http://example.org/kitchen-appliances#Toaster" rdfs:subClassOf="kitchen:KitchenAppliance"/>
+    <owl:Class rdf:about="http://example.org/kitchen-appliances#Blender" rdfs:subClassOf="kitchen:KitchenAppliance"/>
+    <owl:Class rdf:about="http://example.org/kitchen-appliances#FoodProcessor" rdfs:subClassOf="kitchen:KitchenAppliance"/>
+    <owl:Class rdf:about="http://example.org/kitchen-appliances#AirFryer" rdfs:subClassOf="kitchen:KitchenAppliance"/>
+    <owl:Class rdf:about="http://example.org/kitchen-appliances#CoffeeMaker" rdfs:subClassOf="kitchen:KitchenAppliance"/>
+    <owl:Class rdf:about="http://example.org/kitchen-appliances#ElectricKettle" rdfs:subClassOf="kitchen:KitchenAppliance"/>
+    <owl:Class rdf:about="http://example.org/kitchen-appliances#SlowCooker" rdfs:subClassOf="kitchen:KitchenAppliance"/>
+    <owl:Class rdf:about="http://example.org/kitchen-appliances#InstantPot" rdfs:subClassOf="kitchen:KitchenAppliance"/>
+    <owl:Class rdf:about="http://example.org/kitchen-appliances#RiceCooker" rdfs:subClassOf="kitchen:KitchenAppliance"/>
+    <owl:Class rdf:about="http://example.org/kitchen-appliances#Griddle" rdfs:subClassOf="kitchen:KitchenAppliance"/>
+    <owl:Class rdf:about="http://example.org/kitchen-appliances#SandwichMaker" rdfs:subClassOf="kitchen:KitchenAppliance"/>
+
+    <!-- Define properties for stove types -->
+    <owl:ObjectProperty rdf:about="http://example.org/kitchen-appliances#hasStoveType"/>
+    <owl:Class rdf:about="http://example.org/kitchen-appliances#StoveType"/>
+    <owl:NamedIndividual rdf:about="http://example.org/kitchen-appliances#GasStove" rdf:type="kitchen:StoveType"/>
+    <owl:NamedIndividual rdf:about="http://example.org/kitchen-appliances#ElectricStove" rdf:type="kitchen:StoveType"/>
+    <owl:NamedIndividual rdf:about="http://example.org/kitchen-appliances#InductionStove" rdf:type="kitchen:StoveType"/>
+    
+    <!-- Define properties for oven types -->
+    <owl:ObjectProperty rdf:about="http://example.org/kitchen-appliances#hasOvenType"/>
+    <owl:Class rdf:about="http://example.org/kitchen-appliances#OvenType"/>
+    <owl:NamedIndividual rdf:about="http://example.org/kitchen-appliances#ConventionalOven" rdf:type="kitchen:OvenType"/>
+    <owl:NamedIndividual rdf:about="http://example.org/kitchen-appliances#ConvectionOven" rdf:type="kitchen:OvenType"/>
+    <owl:NamedIndividual rdf:about="http://example.org/kitchen-appliances#MicrowaveOven" rdf:type="kitchen:OvenType"/>
+    
+</rdf:RDF>

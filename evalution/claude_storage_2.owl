@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.org/kitchen#"
+     xml:base="http://www.example.org/kitchen"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+    <owl:Ontology rdf:about="http://www.example.org/kitchen"/>
+
+    <!-- Object Properties -->
+    <owl:ObjectProperty rdf:about="http://www.example.org/kitchen#isLocated">
+        <rdfs:domain rdf:resource="http://www.example.org/kitchen#KitchenObject"/>
+        <rdfs:range rdf:resource="http://www.example.org/kitchen#StorageLocation"/>
+    </owl:ObjectProperty>
+
+    <!-- Classes -->
+    <owl:Class rdf:about="http://www.example.org/kitchen#StorageLocation"/>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#UpperCabinet">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#StorageLocation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#LowerCabinet">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#StorageLocation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#UtensilDrawer">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#StorageLocation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#Countertop">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#StorageLocation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#Refrigerator">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#StorageLocation"/>
+    </owl:Class>
+
+    <!-- Kitchen Object Hierarchy -->
+    <owl:Class rdf:about="http://www.example.org/kitchen#KitchenObject"/>
+
+    <!-- Utensils -->
+    <owl:Class rdf:about="http://www.example.org/kitchen#Utensils">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#KitchenObject"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#Knife">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#Utensils"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/kitchen#isLocated"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/kitchen#UtensilDrawer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#Spoon">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#Utensils"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/kitchen#isLocated"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/kitchen#UtensilDrawer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <!-- Appliances -->
+    <owl:Class rdf:about="http://www.example.org/kitchen#Appliances">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#KitchenObject"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#Toaster">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#Appliances"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/kitchen#isLocated"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/kitchen#Countertop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#CoffeeMaker">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#Appliances"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/kitchen#isLocated"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/kitchen#Countertop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <!-- Food -->
+    <owl:Class rdf:about="http://www.example.org/kitchen#Food">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#KitchenObject"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#Milk">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#Food"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/kitchen#isLocated"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/kitchen#Refrigerator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <!-- Cookware -->
+    <owl:Class rdf:about="http://www.example.org/kitchen#Cookware">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#KitchenObject"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#Pan">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#Cookware"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/kitchen#isLocated"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/kitchen#LowerCabinet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <!-- Dishware -->
+    <owl:Class rdf:about="http://www.example.org/kitchen#Dishware">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#KitchenObject"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#Bowl">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#Dishware"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/kitchen#isLocated"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/kitchen#UpperCabinet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+</rdf:RDF>

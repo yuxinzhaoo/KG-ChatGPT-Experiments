@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:kitchen="http://www.example.org/kitchen#">
+
+    <!-- Define the ontology IRI -->
+    <owl:Ontology rdf:about="http://www.example.org/kitchen"/>
+
+    <!-- Define the StorageLocation class -->
+    <owl:Class rdf:about="http://www.example.org/kitchen#StorageLocation">
+        <rdfs:label>StorageLocation</rdfs:label>
+    </owl:Class>
+
+    <!-- Define subclasses of StorageLocation -->
+    <owl:Class rdf:about="http://www.example.org/kitchen#Cabinets">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#StorageLocation"/>
+        <rdfs:label>Cabinets</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#Drawers">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#StorageLocation"/>
+        <rdfs:label>Drawers</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#Countertop">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#StorageLocation"/>
+        <rdfs:label>Countertop</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#Refrigerator">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#StorageLocation"/>
+        <rdfs:label>Refrigerator</rdfs:label>
+    </owl:Class>
+
+    <!-- Define the KitchenObject class -->
+    <owl:Class rdf:about="http://www.example.org/kitchen#KitchenObject">
+        <rdfs:label>KitchenObject</rdfs:label>
+    </owl:Class>
+
+    <!-- Define subclasses of KitchenObject -->
+    <owl:Class rdf:about="http://www.example.org/kitchen#Spoons">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#KitchenObject"/>
+        <rdfs:label>Spoons</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/kitchen#isLocated"/>
+                <owl:hasValue rdf:resource="http://www.example.org/kitchen#Drawers"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#Knives">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#KitchenObject"/>
+        <rdfs:label>Knives</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/kitchen#isLocated"/>
+                <owl:hasValue rdf:resource="http://www.example.org/kitchen#Drawers"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#CoffeeMaker">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#KitchenObject"/>
+        <rdfs:label>Coffee Maker</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/kitchen#isLocated"/>
+                <owl:hasValue rdf:resource="http://www.example.org/kitchen#Countertop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#Toaster">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#KitchenObject"/>
+        <rdfs:label>Toaster</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/kitchen#isLocated"/>
+                <owl:hasValue rdf:resource="http://www.example.org/kitchen#Countertop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#Blender">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#KitchenObject"/>
+        <rdfs:label>Blender</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/kitchen#isLocated"/>
+                <owl:hasValue rdf:resource="http://www.example.org/kitchen#Countertop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#Milk">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#KitchenObject"/>
+        <rdfs:label>Milk</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/kitchen#isLocated"/>
+                <owl:hasValue rdf:resource="http://www.example.org/kitchen#Refrigerator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#Bowls">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#KitchenObject"/>
+        <rdfs:label>Bowls</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/kitchen#isLocated"/>
+                <owl:hasValue rdf:resource="http://www.example.org/kitchen#Cabinets"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#CuttingBoard">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#KitchenObject"/>
+        <rdfs:label>Cutting Board</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/kitchen#isLocated"/>
+                <owl:hasValue rdf:resource="http://www.example.org/kitchen#Countertop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <!-- Define the isLocated property -->
+    <owl:ObjectProperty rdf:about="http://www.example.org/kitchen#isLocated">
+        <rdfs:domain rdf:resource="http://www.example.org/kitchen#KitchenObject"/>
+        <rdfs:range rdf:resource="http://www.example.org/kitchen#StorageLocation"/>
+        <rdfs:label>isLocated</rdfs:label>
+    </owl:ObjectProperty>
+
+</rdf:RDF>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/apple-ontology#"
+     xml:base="http://example.org/apple-ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+    <owl:Ontology rdf:about="http://example.org/apple-ontology">
+        <rdfs:comment>An ontology defining the Apple class and aligning it with the FoodOn ontology.</rdfs:comment>
+    </owl:Ontology>
+
+    <!-- Define the Apple class -->
+    <owl:Class rdf:about="http://example.org/apple-ontology#Apple">
+        <rdfs:label xml:lang="en">Apple</rdfs:label>
+        <rdfs:comment xml:lang="en">A fruit belonging to the species Malus domestica.</rdfs:comment>
+        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/FOODON_03311009"/>
+    </owl:Class>
+
+</rdf:RDF>

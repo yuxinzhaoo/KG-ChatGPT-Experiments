@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.org/kitchen_appliances#"
+     xml:base="http://www.example.org/kitchen_appliances"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+    <owl:Ontology rdf:about="http://www.example.org/kitchen_appliances"/>
+
+    <!-- Classes -->
+    <owl:Class rdf:about="#KitchenAppliance"/>
+    <owl:Class rdf:about="#CookingAppliance">
+        <rdfs:subClassOf rdf:resource="#KitchenAppliance"/>
+    </owl:Class>
+    <owl:Class rdf:about="#HeatingAppliance">
+        <rdfs:subClassOf rdf:resource="#KitchenAppliance"/>
+    </owl:Class>
+    <owl:Class rdf:about="#ProcessingAppliance">
+        <rdfs:subClassOf rdf:resource="#KitchenAppliance"/>
+    </owl:Class>
+
+    <!-- Instances -->
+    <owl:NamedIndividual rdf:about="#Stove_Cooktop">
+        <rdf:type rdf:resource="#CookingAppliance"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#Oven">
+        <rdf:type rdf:resource="#CookingAppliance"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#Toaster">
+        <rdf:type rdf:resource="#HeatingAppliance"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#Blender">
+        <rdf:type rdf:resource="#ProcessingAppliance"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#FoodProcessor">
+        <rdf:type rdf:resource="#ProcessingAppliance"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#AirFryer">
+        <rdf:type rdf:resource="#HeatingAppliance"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#CoffeeMaker">
+        <rdf:type rdf:resource="#HeatingAppliance"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#ElectricKettle">
+        <rdf:type rdf:resource="#HeatingAppliance"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#SlowCooker">
+        <rdf:type rdf:resource="#CookingAppliance"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#RiceCooker">
+        <rdf:type rdf:resource="#CookingAppliance"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="#Griddle">
+        <rdf:type rdf:resource="#CookingAppliance"/>
+    </owl:NamedIndividual>
+
+</rdf:RDF>

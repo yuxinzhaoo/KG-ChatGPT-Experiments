@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.com/kitchen#"
+     xml:base="http://example.com/kitchen"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+    <owl:Ontology rdf:about="http://example.com/kitchen"/>
+
+    <!-- Define CookingAppliance as a Class -->
+    <owl:Class rdf:about="http://example.com/kitchen#CookingAppliance"/>
+
+    <!-- Subclasses of CookingAppliance -->
+    <owl:Class rdf:about="http://example.com/kitchen#Stove">
+        <rdfs:subClassOf rdf:resource="http://example.com/kitchen#CookingAppliance"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.com/kitchen#Oven">
+        <rdfs:subClassOf rdf:resource="http://example.com/kitchen#CookingAppliance"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.com/kitchen#Toaster">
+        <rdfs:subClassOf rdf:resource="http://example.com/kitchen#CookingAppliance"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.com/kitchen#Blender">
+        <rdfs:subClassOf rdf:resource="http://example.com/kitchen#CookingAppliance"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.com/kitchen#FoodProcessor">
+        <rdfs:subClassOf rdf:resource="http://example.com/kitchen#CookingAppliance"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.com/kitchen#AirFryer">
+        <rdfs:subClassOf rdf:resource="http://example.com/kitchen#CookingAppliance"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.com/kitchen#CoffeeMaker">
+        <rdfs:subClassOf rdf:resource="http://example.com/kitchen#CookingAppliance"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.com/kitchen#ElectricKettle">
+        <rdfs:subClassOf rdf:resource="http://example.com/kitchen#CookingAppliance"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.com/kitchen#SlowCooker">
+        <rdfs:subClassOf rdf:resource="http://example.com/kitchen#CookingAppliance"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.com/kitchen#RiceCooker">
+        <rdfs:subClassOf rdf:resource="http://example.com/kitchen#CookingAppliance"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.com/kitchen#Griddle">
+        <rdfs:subClassOf rdf:resource="http://example.com/kitchen#CookingAppliance"/>
+    </owl:Class>
+
+    <!-- Subclasses for Stove -->
+    <owl:Class rdf:about="http://example.com/kitchen#GasStove">
+        <rdfs:subClassOf rdf:resource="http://example.com/kitchen#Stove"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://example.com/kitchen#ElectricStove">
+        <rdfs:subClassOf rdf:resource="http://example.com/kitchen#Stove"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://example.com/kitchen#InductionStove">
+        <rdfs:subClassOf rdf:resource="http://example.com/kitchen#Stove"/>
+    </owl:Class>
+
+    <!-- Subclasses for Oven -->
+    <owl:Class rdf:about="http://example.com/kitchen#ConventionalOven">
+        <rdfs:subClassOf rdf:resource="http://example.com/kitchen#Oven"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://example.com/kitchen#ConvectionOven">
+        <rdfs:subClassOf rdf:resource="http://example.com/kitchen#Oven"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://example.com/kitchen#MicrowaveOven">
+        <rdfs:subClassOf rdf:resource="http://example.com/kitchen#Oven"/>
+    </owl:Class>
+
+    <!-- Subclasses for Coffee Maker -->
+    <owl:Class rdf:about="http://example.com/kitchen#EspressoMachine">
+        <rdfs:subClassOf rdf:resource="http://example.com/kitchen#CoffeeMaker"/>
+    </owl:Class>
+    
+</rdf:RDF>

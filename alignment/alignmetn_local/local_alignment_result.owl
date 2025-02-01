@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:kitchen1="http://www.example.org/kitchen-appliances-1#"
+         xmlns:kitchen2="http://www.example.org/kitchen-appliances-2#"
+         xml:base="http://www.example.org/kitchen-appliances-2"
+         xmlns="http://www.example.org/kitchen-appliances-2#">
+
+    <owl:Ontology rdf:about="http://www.example.org/kitchen-appliances-2">
+        <owl:imports rdf:resource="http://www.example.org/kitchen-appliances-1"/>
+    </owl:Ontology>
+
+    <!-- Align main class -->
+    <owl:Class rdf:about="http://www.example.org/kitchen-appliances-2#CookingAppliance">
+        <owl:equivalentClass rdf:resource="http://www.example.org/kitchen-appliances-1#CookingAppliance"/>
+    </owl:Class>
+
+    <!-- Align subclasses -->
+    <owl:Class rdf:about="http://www.example.org/kitchen-appliances-2#Stove">
+        <owl:equivalentClass rdf:resource="http://www.example.org/kitchen-appliances-1#Stove"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen-appliances-2#Oven">
+        <owl:equivalentClass rdf:resource="http://www.example.org/kitchen-appliances-1#Oven"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen-appliances-2#Toaster">
+        <owl:equivalentClass rdf:resource="http://www.example.org/kitchen-appliances-1#Toaster"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen-appliances-2#Blender">
+        <owl:equivalentClass rdf:resource="http://www.example.org/kitchen-appliances-1#Blender"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen-appliances-2#FoodProcessor">
+        <owl:equivalentClass rdf:resource="http://www.example.org/kitchen-appliances-1#FoodProcessor"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen-appliances-2#AirFryer">
+        <owl:equivalentClass rdf:resource="http://www.example.org/kitchen-appliances-1#AirFryer"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen-appliances-2#CoffeeMaker">
+        <owl:equivalentClass rdf:resource="http://www.example.org/kitchen-appliances-1#CoffeeMaker"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen-appliances-2#ElectricKettle">
+        <owl:equivalentClass rdf:resource="http://www.example.org/kitchen-appliances-1#ElectricKettle"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen-appliances-2#SlowCooker">
+        <owl:equivalentClass rdf:resource="http://www.example.org/kitchen-appliances-1#SlowCooker"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen-appliances-2#RiceCooker">
+        <owl:equivalentClass rdf:resource="http://www.example.org/kitchen-appliances-1#RiceCooker"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen-appliances-2#Griddle">
+        <owl:equivalentClass rdf:resource="http://www.example.org/kitchen-appliances-1#Griddle"/>
+    </owl:Class>
+
+    <!-- Further subclassing alignment -->
+    <owl:Class rdf:about="http://www.example.org/kitchen-appliances-2#GasStove">
+        <owl:equivalentClass rdf:resource="http://www.example.org/kitchen-appliances-1#GasStove"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen-appliances-2#ElectricStove">
+        <owl:equivalentClass rdf:resource="http://www.example.org/kitchen-appliances-1#ElectricStove"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen-appliances-2#InductionStove">
+        <owl:equivalentClass rdf:resource="http://www.example.org/kitchen-appliances-1#InductionStove"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen-appliances-2#ConventionalOven">
+        <owl:equivalentClass rdf:resource="http://www.example.org/kitchen-appliances-1#ConventionalOven"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen-appliances-2#ConvectionOven">
+        <owl:equivalentClass rdf:resource="http://www.example.org/kitchen-appliances-1#ConvectionOven"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen-appliances-2#MicrowaveOven">
+        <owl:equivalentClass rdf:resource="http://www.example.org/kitchen-appliances-1#MicrowaveOven"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen-appliances-2#EspressoMachine">
+        <owl:equivalentClass rdf:resource="http://www.example.org/kitchen-appliances-1#EspressoMachine"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen-appliances-2#InstantPot">
+        <owl:equivalentClass rdf:resource="http://www.example.org/kitchen-appliances-1#InstantPot"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen-appliances-2#SandwichMaker">
+        <owl:equivalentClass rdf:resource="http://www.example.org/kitchen-appliances-1#SandwichMaker"/>
+    </owl:Class>
+
+</rdf:RDF>

@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:kitchen="http://www.example.org/kitchen#">
+
+    <!-- Define the ontology IRI -->
+    <owl:Ontology rdf:about="http://www.example.org/kitchen"/>
+
+    <!-- Define the StorageLocation class -->
+    <owl:Class rdf:about="http://www.example.org/kitchen#StorageLocation">
+        <rdfs:label>StorageLocation</rdfs:label>
+    </owl:Class>
+
+    <!-- Define subclasses of StorageLocation -->
+    <owl:Class rdf:about="http://www.example.org/kitchen#Cabinet">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#StorageLocation"/>
+        <rdfs:label>Cabinet</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#Drawer">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#StorageLocation"/>
+        <rdfs:label>Drawer</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#Fridge">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#StorageLocation"/>
+        <rdfs:label>Fridge</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.example.org/kitchen#Countertop">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/kitchen#StorageLocation"/>
+        <rdfs:label>Countertop</rdfs:label>
+    </owl:Class>
+
+    <!-- Define the KitchenObject class -->
+    <owl:Class rdf:about="http://www.example.org/kitchen#KitchenObject">
+        <rdfs:label>KitchenObject</rdfs:label>
+    </owl:Class>
+
+    <!-- Define the isLocated object property -->
+    <owl:ObjectProperty rdf:about="http://www.example.org/kitchen#isLocated">
+        <rdfs:label>isLocated</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.example.org/kitchen#KitchenObject"/>
+        <rdfs:range rdf:resource="http://www.example.org/kitchen#StorageLocation"/>
+    </owl:ObjectProperty>
+
+    <!-- Define KitchenObject instances and link them to StorageLocation using isLocated -->
+    <kitchen:KitchenObject rdf:about="http://www.example.org/kitchen#Knife">
+        <rdfs:label>Knife</rdfs:label>
+        <kitchen:isLocated rdf:resource="http://www.example.org/kitchen#Drawer"/>
+    </kitchen:KitchenObject>
+
+    <kitchen:KitchenObject rdf:about="http://www.example.org/kitchen#Spoon">
+        <rdfs:label>Spoon</rdfs:label>
+        <kitchen:isLocated rdf:resource="http://www.example.org/kitchen#Drawer"/>
+    </kitchen:KitchenObject>
+
+    <kitchen:KitchenObject rdf:about="http://www.example.org/kitchen#Toaster">
+        <rdfs:label>Toaster</rdfs:label>
+        <kitchen:isLocated rdf:resource="http://www.example.org/kitchen#Countertop"/>
+    </kitchen:KitchenObject>
+
+    <kitchen:KitchenObject rdf:about="http://www.example.org/kitchen#Blender">
+        <rdfs:label>Blender</rdfs:label>
+        <kitchen:isLocated rdf:resource="http://www.example.org/kitchen#Countertop"/>
+    </kitchen:KitchenObject>
+
+    <kitchen:KitchenObject rdf:about="http://www.example.org/kitchen#CoffeeMaker">
+        <rdfs:label>Coffee Maker</rdfs:label>
+        <kitchen:isLocated rdf:resource="http://www.example.org/kitchen#Countertop"/>
+    </kitchen:KitchenObject>
+
+    <kitchen:KitchenObject rdf:about="http://www.example.org/kitchen#Milk">
+        <rdfs:label>Milk</rdfs:label>
+        <kitchen:isLocated rdf:resource="http://www.example.org/kitchen#Fridge"/>
+    </kitchen:KitchenObject>
+
+    <kitchen:KitchenObject rdf:about="http://www.example.org/kitchen#Bowl">
+        <rdfs:label>Bowl</rdfs:label>
+        <kitchen:isLocated rdf:resource="http://www.example.org/kitchen#Cabinet"/>
+    </kitchen:KitchenObject>
+
+    <kitchen:KitchenObject rdf:about="http://www.example.org/kitchen#CuttingBoard">
+        <rdfs:label>Cutting Board</rdfs:label>
+        <kitchen:isLocated rdf:resource="http://www.example.org/kitchen#Countertop"/>
+    </kitchen:KitchenObject>
+
+</rdf:RDF>
