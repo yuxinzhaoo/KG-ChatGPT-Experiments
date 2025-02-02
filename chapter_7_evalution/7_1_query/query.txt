@@ -1,0 +1,107 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX kitchen: <http://www.example.org/kitchen#>
+
+SELECT DISTINCT ?class
+WHERE {
+  ?class rdf:type owl:Class .
+    FILTER NOT EXISTS {
+       ?class rdfs:subClassOf ?parent .
+ }
+  FILTER(STRSTARTS(STR(?class), STR(kitchen:))) .
+}
+
+//
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX kitchen: <http://www.example.org/kitchen#>
+
+SELECT DISTINCT ?class
+WHERE {
+  ?class rdfs:subClassOf+ kitchen:StorageLocation .
+}
+
+//
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX kitchen: <http://www.example.org/kitchen#>
+
+SELECT DISTINCT ?property
+WHERE {
+  ?class owl:onProperty ?property .
+  FILTER(STRSTARTS(STR(?property), STR(kitchen:))) .
+}
+//
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX kitchen: <http://www.example.org/kitchen#>
+
+SELECT DISTINCT ?location
+WHERE {
+  kitchen:Bowls rdfs:subClassOf ?restriction .
+  ?restriction owl:someValuesFrom ?location .
+  ?restriction owl:onProperty kitchen:isLocated .
+}
+
+//
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX kitchen: <http://www.example.org/kitchen#>
+
+SELECT DISTINCT ?class
+WHERE {
+  ?class rdfs:subClassOf ?restriction .
+  ?restriction a owl:Restriction .
+  ?restriction owl:someValuesFrom kitchen:UpperCabinets .
+  ?restriction owl:onProperty kitchen:isLocated .
+}
+
+//
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX kitchen: <http://www.example.org/kitchen#>
+
+SELECT DISTINCT ?location
+WHERE {
+  ?class a owl:Class .
+  ?class rdfs:subClassOf ?restrition .
+  ?restriction owl:onProperty kitchen:hasUsage .
+  ?restriction owl:someValuesFrom kitchen:Heating .
+
+  ?class rdfs:subClassOf ?restrition1 .
+  ?restriction1 owl:onProperty kitchen:isLocated .
+  ?restriction1 owl:someValuesFrom ?location .
+}
+
+//
+
+PREFIX kitchen: <http://www.example.org/kitchen#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?restriction ?property ?value ?class ?restriction2 ?storageLocation ?SpecificStorageLocation
+WHERE {
+  # 找到所有与 Heating 有关的 Restriction
+  ?restriction rdf:type owl:Restriction .
+  ?restriction owl:onProperty ?property .
+  ?restriction owl:someValuesFrom|owl:allValuesFrom ?value .
+  
+  # 过滤出与 Heating 相关的 Restriction
+  FILTER(?value = kitchen:Heating)
+  
+  # 根据Heating找到用了Heating的类，返回微波炉，然后通过isLocated找微波炉的位置
+  ?class rdfs:subClassOf ?restriction .
+  ?class rdfs:subClassOf ?restriction2 .
+  ?restriction2 owl:onProperty kitchen:isLocated .
+  ?restriction2 owl:someValuesFrom|owl:allValuesFrom ?storageLocation .
+  ?storageLocation rdfs:subClassOf ?SpecificStorageLocation .
+}
