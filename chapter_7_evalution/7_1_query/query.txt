@@ -1,3 +1,4 @@
+// 1
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -12,7 +13,7 @@ WHERE {
   FILTER(STRSTARTS(STR(?class), STR(kitchen:))) .
 }
 
-//
+// 2
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -23,7 +24,7 @@ WHERE {
   ?class rdfs:subClassOf+ kitchen:StorageLocation .
 }
 
-//
+// 3
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -34,7 +35,7 @@ WHERE {
   ?class owl:onProperty ?property .
   FILTER(STRSTARTS(STR(?property), STR(kitchen:))) .
 }
-//
+// 4
 
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -48,7 +49,7 @@ WHERE {
   ?restriction owl:onProperty kitchen:isLocated .
 }
 
-//
+// 5
 
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -63,25 +64,27 @@ WHERE {
   ?restriction owl:onProperty kitchen:isLocated .
 }
 
-//
+// 6
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX kitchen: <http://www.example.org/kitchen#>
 
-SELECT DISTINCT ?location
+SELECT DISTINCT ?subclass?location
 WHERE {
   ?class a owl:Class .
-  ?class rdfs:subClassOf ?restrition .
+  ?class rdfs:subClassOf ?restriction .
+  ?restriction a owl:Restriction .
   ?restriction owl:onProperty kitchen:hasUsage .
   ?restriction owl:someValuesFrom kitchen:Heating .
 
-  ?class rdfs:subClassOf ?restrition1 .
+  ?class rdfs:subClassOf ?restriction1 .
+  ?restriction a owl:Restriction .
   ?restriction1 owl:onProperty kitchen:isLocated .
-  ?restriction1 owl:someValuesFrom ?location .
+  ?restriction1 owl:someValuesFrom ?subclass.
+  ?location rdfs:subClassOf ?location.
 }
-
-//
+// 7
 
 PREFIX kitchen: <http://www.example.org/kitchen#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
