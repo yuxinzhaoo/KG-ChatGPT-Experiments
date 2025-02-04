@@ -1,0 +1,54 @@
+graph TD
+    A[Kitchen Objects]
+    A --> B[Utensils]
+    A --> C[Appliances]
+    A --> D[Ingredients]
+    A --> E[Cookware]
+
+    B --> B1[Knife]
+    B1 --> B1a[Knife Block]
+    B1 --> B1b[Drawer]
+    B1 --> B1c[Magnetic Strip]
+    B1 --> B1d[Kitchen Counter]
+
+    B --> B2[Spoon]
+    B2 --> B2a[Utensil Drawer]
+    B2 --> B2b[Countertop Utensil Holder]
+    B2 --> B2c[Hanging Utensil Rack]
+
+    C --> C1[Toaster]
+    C1 --> C1a[Countertop]
+    C1 --> C1b[Cabinet]
+    C1 --> C1c[Pantry Shelf]
+
+    C --> C2[Blender]
+    C2 --> C2a[Countertop]
+    C2 --> C2b[Cabinet]
+    C2 --> C2c[Pantry Shelf]
+
+    C --> C3[Coffee Maker]
+    C3 --> C3a[Countertop]
+    C3 --> C3b[Cabinet]
+    C3 --> C3c[Dedicated Appliance Station]
+
+    D --> D1[Flour]
+    D1 --> D1a[Pantry]
+    D1 --> D1b[Airtight Container]
+    D1 --> D1c[Kitchen Cabinet]
+
+    D --> D2[Milk]
+    D2 --> D2a[Refrigerator]
+    D2 --> D2b[Temporary Countertop]
+
+    E --> E1[Pan]
+    E1 --> E1a[Hanging Rack]
+    E1 --> E1b[Cabinet]
+    E1 --> E1c[Drawer]
+    E1 --> E1d[Pot Rack]
+
+    E --> E2[Bowl]
+    E2 --> E2a[Cabinet Shelf]
+    E2 --> E2b[Open Shelving]
+    E2 --> E2c[Countertop]
+    E2 --> E2d[Drawer]
+    E2 --> E2e[Hanging Rack]

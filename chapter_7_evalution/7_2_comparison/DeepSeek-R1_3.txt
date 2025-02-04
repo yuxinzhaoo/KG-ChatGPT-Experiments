@@ -1,0 +1,42 @@
+Kitchen Objects  
+├── Knife  
+│   ├── Drawer (utensil organizer)  
+│   ├── Knife Block (countertop)  
+│   ├── Magnetic Strip (wall)  
+│   └── Cabinet (in protective sleeve)  
+├── Spoon  
+│   ├── Drawer (utensil section)  
+│   ├── Utensil Holder (countertop)  
+│   └── Hanging Hook (wall/rack)  
+├── Toaster  
+│   ├── Countertop  
+│   ├── Appliance Cabinet  
+│   └── Pantry (if rarely used)  
+├── Blender  
+│   ├── Countertop  
+│   ├── Appliance Cabinet  
+│   └── Pantry  
+├── Coffee Maker  
+│   ├── Countertop  
+│   ├── Appliance Cabinet  
+│   └── Pantry  
+├── Flour  
+│   ├── Pantry (airtight container)  
+│   ├── Refrigerator (whole grain)  
+│   └── Baking Supplies Cabinet  
+├── Milk  
+│   ├── Refrigerator  
+│   └── Pantry (shelf-stable/UHT milk)  
+├── Pan  
+│   ├── Cabinet (pots/pans section)  
+│   ├── Pot Rack (hanging)  
+│   └── Oven (stored when not in use)  
+├── Bowl  
+│   ├── Dishware Cabinet  
+│   ├── Open Shelf (display)  
+│   └── Drying Rack (temporary)  
+└── Cutting Board  
+    ├── Drawer (if slim)  
+    ├── Countertop (standing vertically)  
+    ├── Cabinet (stored flat)  
+    └── Wall-Mounted Rack  

@@ -1,0 +1,69 @@
+flowchart TD
+    A[Kitchen Objects]
+    
+    % Utensils Subgroup
+    A --> Utensils[Utensils]
+    Utensils --> Knife
+    Knife --> KnifeLocations[Possible Locations]
+    KnifeLocations --> KnifeBlock[Knife Block]
+    KnifeLocations --> MagneticStrip[Magnetic Knife Strip]
+    KnifeLocations --> Drawer[Cutlery Drawer]
+    KnifeLocations --> CounterTop[Counter Top]
+
+    Utensils --> Spoon
+    Spoon --> SpoonLocations[Possible Locations]
+    SpoonLocations --> UtensilDrawer[Utensil Drawer]
+    SpoonLocations --> CeramicHolder[Ceramic Utensil Holder]
+    SpoonLocations --> HangingRack[Hanging Utensil Rack]
+
+    % Appliances Subgroup
+    A --> Appliances[Appliances]
+    Appliances --> Toaster
+    Toaster --> ToasterLocations[Possible Locations]
+    ToasterLocations --> CounterTop2[Counter Top]
+    ToasterLocations --> ApplianceShelf[Appliance Shelf]
+    ToasterLocations --> Pantry[Pantry Shelf]
+
+    Appliances --> Blender
+    Blender --> BlenderLocations[Possible Locations]
+    BlenderLocations --> CounterTop3[Counter Top]
+    BlenderLocations --> ApplianceCabinet[Appliance Cabinet]
+    BlenderLocations --> PantryShelf[Pantry Shelf]
+
+    Appliances --> CoffeeMaker[Coffee Maker]
+    CoffeeMaker --> CoffeeLocations[Possible Locations]
+    CoffeeLocations --> CounterTop4[Counter Top]
+    CoffeeLocations --> CoffeeStation[Dedicated Coffee Station]
+    CoffeeLocations --> ApplianceCupboard[Appliance Cupboard]
+
+    % Ingredients Subgroup
+    A --> Ingredients[Ingredients]
+    Ingredients --> Flour
+    Flour --> FlourLocations[Possible Locations]
+    FlourLocations --> PantryShelf2[Pantry Shelf]
+    FlourLocations --> GlassJar[Airtight Glass Jar]
+    FlourLocations --> StorageCabinet[Dry Goods Cabinet]
+
+    Ingredients --> Milk
+    Milk --> MilkLocations[Possible Locations]
+    MilkLocations --> Refrigerator[Refrigerator]
+
+    % Cookware Subgroup
+    A --> Cookware[Cookware]
+    Cookware --> Pan
+    Pan --> PanLocations[Possible Locations]
+    PanLocations --> HangingRack2[Hanging Pot Rack]
+    PanLocations --> PanCabinet[Lower Kitchen Cabinet]
+    PanLocations --> PanDrawer[Deep Kitchen Drawer]
+
+    Cookware --> Bowl
+    Bowl --> BowlLocations[Possible Locations]
+    BowlLocations --> OpenShelving[Open Shelving]
+    BowlLocations --> UpperCabinet[Upper Kitchen Cabinet]
+    BowlLocations --> BowlDrawer[Dedicated Bowl Drawer]
+
+    Cookware --> CuttingBoard[Cutting Board]
+    CuttingBoard --> BoardLocations[Possible Locations]
+    BoardLocations --> CounterEdge[Counter Edge Rack]
+    BoardLocations --> PantryStorage[Pantry Storage]
+    BoardLocations --> CabinetSide[Cabinet Side Mount]

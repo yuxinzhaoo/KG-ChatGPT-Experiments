@@ -1,0 +1,116 @@
+Kitchen Objects
+│
+├── Utensils
+│   ├── Knife
+│   │   ├── Drawer
+│   │   ├── Knife Block
+│   │   ├── Magnetic Strip
+│   │   ├── Utensil HolderKitchen Objects
+│
+├── Utensils
+│   ├── Knife
+│   │   ├── Drawer
+│   │   ├── Knife Block
+│   │   ├── Magnetic Strip
+│   │   ├── Countertop
+│   │   └── Dish Rack
+│   ├── Spoon
+│   │   ├── Drawer
+│   │   ├── Utensil Holder
+│   │   ├── Dish Rack
+│   │   └── Table
+│
+├── Appliances
+│   ├── Toaster
+│   │   ├── Countertop
+│   │   ├── Cabinet
+│   │   ├── Pantry Shelf
+│   │   └── Storage Closet
+│   ├── Blender
+│   │   ├── Countertop
+│   │   ├── Cabinet
+│   │   ├── Pantry Shelf
+│   │   └── Storage Closet
+│   ├── Coffee Maker
+│   │   ├── Countertop
+│   │   ├── Cabinet
+│   │   ├── Pantry Shelf
+│   │   └── Coffee Station
+│
+├── Ingredients
+│   ├── Flour
+│   │   ├── Pantry Shelf
+│   │   ├── Cabinet
+│   │   ├── Countertop (in container)
+│   │   ├── Refrigerator (if sealed for freshness)
+│   │   └── Freezer (for long-term storage)
+│   ├── Milk
+│   │   ├── Refrigerator (Main Shelf)
+│   │   ├── Refrigerator (Door Shelf)
+│   │   └── Cooler
+│
+├── Cookware & Prep Tools
+│   ├── Pan
+│   │   ├── Cabinet
+│   │   ├── Hanging Rack
+│   │   ├── Drawer
+│   │   ├── Stove Top
+│   │   ├── Dish Rack
+│   │   └── Oven (if stored inside)
+│   ├── Bowl
+│   │   ├── Cabinet
+│   │   ├── Pantry Shelf
+│   │   ├── Countertop
+│   │   ├── Dishwasher
+│   │   └── Drying Rack
+│   ├── Cutting Board
+│   │   ├── Drawer
+│   │   ├── Countertop
+│   │   ├── Hanging Rack
+│   │   ├── Cabinet
+│   │   └── Dish Rack
+
+│   ├── Spoon
+│       ├── Drawer
+│       ├── Utensil Holder
+│       ├── Dish Rack
+│
+├── Appliances
+│   ├── Toaster
+│   │   ├── Countertop
+│   │   ├── Pantry
+│   │   ├── Cabinet
+│   ├── Blender
+│   │   ├── Countertop
+│   │   ├── Pantry
+│   │   ├── Cabinet
+│   ├── Coffee Maker
+│       ├── Countertop
+│       ├── Pantry
+│       ├── Cabinet
+│
+├── Cookware
+│   ├── Pan
+│   │   ├── Cabinet
+│   │   ├── Hanging Rack
+│   │   ├── Stove Drawer
+│   │   ├── Open Shelf
+│   ├── Bowl
+│       ├── Cabinet
+│       ├── Open Shelf
+│       ├── Dish Rack
+│
+├── Food Ingredients
+│   ├── Flour
+│   │   ├── Pantry
+│   │   ├── Sealed Container
+│   │   ├── Refrigerator (if opened)
+│   ├── Milk
+│       ├── Refrigerator
+│
+├── Kitchen Tools
+│   ├── Cutting Board
+│       ├── Cabinet
+│       ├── Hanging Hook
+│       ├── Countertop
+│       ├── Drawer

@@ -1,0 +1,48 @@
+Kitchen Objects  
+├── Utensils  
+│   ├── Knife  
+│   │   ├── Drawer  
+│   │   ├── Knife Block  
+│   │   ├── Magnetic Strip  
+│   │   ├── Dishwasher  
+│   │   └── Countertop (temporarily)  
+│   └── Spoon  
+│       ├── Drawer  
+│       ├── Silverware Tray  
+│       ├── Dishwasher  
+│       ├── Utensil Holder  
+│       └── Countertop  
+├── Appliances  
+│   ├── Toaster  
+│   │   ├── Countertop  
+│   │   ├── Cabinet  
+│   │   └── Pantry  
+│   ├── Blender  
+│   │   ├── Countertop  
+│   │   ├── Cabinet  
+│   │   └── Pantry  
+│   └── Coffee Maker  
+│       ├── Countertop  
+│       ├── Cabinet  
+│       └── Pantry  
+├── Ingredients  
+│   ├── Flour  
+│   │   ├── Pantry  
+│   │   └── Refrigerator (specialty flours)  
+│   └── Milk  
+│       ├── Refrigerator  
+│       └── Pantry (unopened shelf-stable/UHT)  
+└── Cookware & Tools  
+    ├── Pan  
+    │   ├── Cabinet  
+    │   ├── Hanging Rack  
+    │   ├── Oven Drawer  
+    │   └── Dishwasher  
+    ├── Bowl  
+    │   ├── Cabinet  
+    │   ├── Dishwasher  
+    │   └── Drying Rack  
+    └── Cutting Board  
+        ├── Drawer  
+        ├── Countertop  
+        └── Dish Rack (temporarily)  
